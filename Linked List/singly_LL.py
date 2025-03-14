@@ -19,10 +19,14 @@ class singly_LL:
             
     def delete(self,val):
          temp=self.head
-         while temp.next and temp.data!=val:
+         if temp.data==val:
+             self.head=temp.next
+             temp=None
+             return 
+         while temp and temp.data!=val:
              pre=temp
              temp=temp.next
-         if temp.data!=val:
+         if temp==None:
               print("element to delete not found")
               return 
          pre.next=temp.next
@@ -31,9 +35,9 @@ class singly_LL:
     def add_after(self,after,val):
          new=node(val)
          temp=self.head
-         while temp.next and temp.data!=after:
+         while temp and temp.data!=after:
              temp=temp.next
-         if temp.data!=after:
+         if temp==None:
               print("element after which to insert not found")
               return 
          new.next=temp.next
