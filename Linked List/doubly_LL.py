@@ -65,13 +65,14 @@ class doubly_LL:
     def show_reverse(self):
         if self.head is None:
             return
-        print(None,end=" -> ")
+        print(None,end=" <-> ")
         temp=self.head
         while temp.next:
             temp=temp.next
         while temp:
-            print(temp.data,end=" -> ")
+            print(temp.data,end=" <-> ")
             temp=temp.pre
+        print(None)
     
 listt=doubly_LL()   
 l=[10,20,30,40,50]    
