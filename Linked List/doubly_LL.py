@@ -31,6 +31,7 @@ class doubly_LL:
              self.head=temp.next
              self.head.pre=None
              temp=None
+             return 
          while temp and temp.data!=val:
              p=temp
              temp=temp.next
@@ -78,7 +79,7 @@ listt=doubly_LL()
 l=[10,20,30,40,50]    
 for i in l:
     listt.add(i)
-listt.delete(50)
+listt.delete(10)
 
 listt.add_after(30,35)
 listt.show_reverse()
