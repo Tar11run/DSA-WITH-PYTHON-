@@ -18,6 +18,8 @@ class singly_LL:
             temp.next=new
             
     def delete(self,val):
+         if self.head is None:
+             return None
          temp=self.head
          if temp.data==val:
              self.head=temp.next
